@@ -12,6 +12,6 @@
     }
   },
   "require": {
-    "smile/elasticsuite": "2.9.*",
+    "smile/elasticsuite": "2.9.*"
   }
 }
