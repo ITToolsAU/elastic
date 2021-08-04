@@ -31,6 +31,8 @@
             <split_on_case_change>false</split_on_case_change>
             <split_on_numerics>false</split_on_numerics>
             <preserve_original>true</preserve_original>
+            <type_table>[ ". => DIGIT"]</type_table>
+            <protected_words>[ "." ]</protected_words>
         </filter>
         <filter name="reference_word_delimiter" type="word_delimiter" language="default">
             <generate_word_parts>false</generate_word_parts>
@@ -40,6 +42,8 @@
             <split_on_case_change>false</split_on_case_change>
             <split_on_numerics>false</split_on_numerics>
             <preserve_original>true</preserve_original>
+            <type_table>[ ". => DIGIT"]</type_table>
+            <protected_words>[ "." ]</protected_words>
         </filter>
     </filters>
 

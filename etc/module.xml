@@ -3,6 +3,7 @@
     <module name="ProxiBlue_Elastic" setup_version="1.0.0">
         <sequence>
             <module name="Smile_ElasticsuiteCore" />
+            <module name="Smile_ElasticsuiteCatalog" />
             <module name="Magento_Search" />
             <module name="Magento_CatalogSearch" />
             <module name="Magento_LayeredNavigation" />

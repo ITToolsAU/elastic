@@ -53,6 +53,7 @@
                     <isUsedInSpellcheck>1</isUsedInSpellcheck>
                     <defaultSearchAnalyzer>whitespace_custom</defaultSearchAnalyzer>
                 </field>
+
             </mapping>
         </type>
     </index>
