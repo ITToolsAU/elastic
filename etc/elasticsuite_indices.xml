@@ -48,9 +48,24 @@
                     <defaultSearchAnalyzer>whitespace_custom</defaultSearchAnalyzer>
                 </field>
 
+                <field name="short_description" type="text">
+                    <isSearchable>1</isSearchable>
+                    <isUsedInSpellcheck>0</isUsedInSpellcheck>
+                    <isFilterable>0</isFilterable>
+                    <defaultSearchAnalyzer>whitespace_custom</defaultSearchAnalyzer>
+                </field>
+
                 <field name="description" type="text">
                     <isSearchable>1</isSearchable>
-                    <isUsedInSpellcheck>1</isUsedInSpellcheck>
+                    <isUsedInSpellcheck>0</isUsedInSpellcheck>
+                    <isFilterable>0</isFilterable>
+                    <defaultSearchAnalyzer>whitespace_custom</defaultSearchAnalyzer>
+                </field>
+
+                <field name="description_1" type="text">
+                    <isSearchable>1</isSearchable>
+                    <isUsedInSpellcheck>0</isUsedInSpellcheck>
+                    <isFilterable>0</isFilterable>
                     <defaultSearchAnalyzer>whitespace_custom</defaultSearchAnalyzer>
                 </field>
 

@@ -24,10 +24,10 @@
 
     <filters>
         <filter name="word_delimiter" type="word_delimiter" language="default">
-            <generate_word_parts>false</generate_word_parts>
+            <generate_word_parts>true</generate_word_parts>
             <catenate_words>true</catenate_words>
-            <catenate_numbers>true</catenate_numbers>
-            <catenate_all>true</catenate_all>
+            <catenate_numbers>false</catenate_numbers>
+            <catenate_all>false</catenate_all>
             <split_on_case_change>false</split_on_case_change>
             <split_on_numerics>false</split_on_numerics>
             <preserve_original>true</preserve_original>
@@ -35,8 +35,8 @@
             <protected_words>[ "." ]</protected_words>
         </filter>
         <filter name="reference_word_delimiter" type="word_delimiter" language="default">
-            <generate_word_parts>false</generate_word_parts>
-            <catenate_words>false</catenate_words>
+            <generate_word_parts>true</generate_word_parts>
+            <catenate_words>true</catenate_words>
             <catenate_numbers>false</catenate_numbers>
             <catenate_all>false</catenate_all>
             <split_on_case_change>false</split_on_case_change>
@@ -50,6 +50,7 @@
     <analyzers>
         <analyzer name="whitespace_custom" tokenizer="standard" language="default">
             <filters>
+                <filter ref="word_delimiter" />
                 <filter ref="ascii_folding" />
                 <filter ref="trim" />
                 <filter ref="lowercase" />

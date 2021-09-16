@@ -1,0 +1,23 @@
+--- src/module-elasticsuite-catalog/Model/Product/Indexer/Fulltext/Datasource/AttributeData.php	2021-08-14 00:02:24.000000000 +0800
++++ src/module-elasticsuite-catalog/Model/Product/Indexer/Fulltext/Datasource/AttributeData.php	2021-09-16 14:52:31.161489363 +0800
+@@ -95,6 +95,20 @@
+                 if (!isset($indexData[$productId])) {
+                     $indexData[$productId] = [];
+                 }
++                if($row['attribute_code'] == 'description') {
++                    $stripped = strip_tags($row['value']);
++                    $stripped = str_replace("\xc2\xa0",' ',$stripped);
++                    $stripped = str_replace('&nbsp;',' ', $stripped);
++                    $stripped = preg_replace("/\s+/", " ", $stripped);
++
++                    if(strlen($stripped) > 32766) {
++                        $indexValues['description'] = substr($stripped,0,32700);
++                        $indexValues['description_1'] = substr($stripped,32701);
++                        $this->addIndexedAttribute($indexData[$productId], 'description_1');
++                    } else {
++                        $indexValues['description'] = $stripped;
++                    }
++                }
+
+                 $indexData[$productId] += $indexValues;
+
